@@ -1,5 +1,19 @@
 # Registro de validação — 5 de novembro de 2026
 
+## Resultado atual
+
+Primeiro espelhamento de tela confirmado visualmente pelo usuário no iPhone 15 Pro Max
+com iOS 27.2 (modelo/versão informados pelo usuário), para Fire TV Stick 4K de 2ª geração,
+modelo AFTKM, Fire OS 8.1.8.5 / Android 11 (confirmados por ADB). Logs do receptor
+registraram negociação, vídeo H.264 recebido e callback de quadro exibido. Instalação
+concluída e integridade do APK conferida. Conteúdo correto confirmado pelo relato do usuário.
+
+Ainda não validados: Fotos, PDF, apresentação PowerPoint, nitidez de texto, rotação,
+slide parado, reconexões repetidas, sessão de 10 minutos, áudio e funcionamento sem WAN.
+Os registros a seguir mostram a sequência dos testes, incluindo tentativas anteriores.
+
+## Ambiente e inspeção inicial
+
 - Mac Apple Silicon arm64, macOS 27.0.1. Inspeção inicial: apenas Java 8 x86_64;
   sem SDK Android, NDK, CMake, Gradle ou ADB no PATH.
 - Ferramentas baixadas para a pasta de trabalho, fora do repositório: Temurin
@@ -19,7 +33,7 @@
 - ADB: nenhum dispositivo conectado na primeira inspeção.
 - Na inspeção inicial, instalação e sessão AirPlay não haviam sido testadas;
   resultados posteriores abaixo.
-- Modelo de iPhone e versão iOS ainda não informados.
+- Modelo e iOS não haviam sido informados na inspeção inicial; confirmação abaixo.
 
 Warnings do build inicial: apenas ABI 32 bits; avisos de versão de XML SDK e APIs
 Android obsoletas. O protótipo é para sideload, não uma publicação Google Play.
@@ -58,5 +72,8 @@ Um APK compilado não constitui validação de compatibilidade.
 - Marcadores `VIDEO_PACKET_RECEIVED` e `VIDEO_FRAME_RENDERED` observados.
 - Formato de saída inicial: área visível de 498 × 1080; callback do decodificador
   confirma apresentação de quadro. Não foi usada captura de tela do conteúdo do usuário.
-- Confirmação visual do usuário, legibilidade de documentos e matriz de apresentações
-  ainda pendentes. Uma sessão não comprova compatibilidade geral com iOS/Fire OS.
+- Confirmação visual recebida do usuário: a tela do iPhone apareceu na TV.
+- Origem informada pelo usuário: iPhone 15 Pro Max, iOS 27.2. Versão iOS não
+  inspecionada diretamente por ferramenta.
+- Legibilidade de documentos e matriz de apresentações ainda pendentes. Uma sessão
+  não comprova compatibilidade geral com iOS/Fire OS.

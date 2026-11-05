@@ -2,7 +2,11 @@
 
 Receptor AirPlay experimental, gratuito, sem nuvem ou assinatura. Alvo: iPhone →
 Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5 / Android 11.
-**Compatibilidade nesse equipamento ainda não validada.**
+**Primeiro espelhamento de tela confirmado pelo usuário:** iPhone 15 Pro Max com
+iOS 27.2 → Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5, em 5 de novembro de 2026.
+Os logs também confirmaram negociação, recepção H.264 e quadro exibido pelo decodificador.
+Fotos, PowerPoint, PDFs, legibilidade e estabilidade prolongada continuam pendentes;
+essa sessão não estabelece compatibilidade geral com outros aparelhos ou versões.
 
 O iPhone abre Fotos, PowerPoint e PDFs e transmite pixels da tela. O APK não abre
 PPTX/PDF. Prioridade: Central de Controle → Espelhamento de Tela. O botão AirPlay

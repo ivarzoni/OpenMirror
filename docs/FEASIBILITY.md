@@ -1,8 +1,9 @@
 # Viabilidade — 5 de novembro de 2026
 
-Conclusão de engenharia: viável como experimento; compatibilidade no alvo pendente.
-Há portas Android com recepção de vídeo real. Relatos dos autores não equivalem
-à validação neste iPhone e Fire TV.
+Conclusão de engenharia: primeiro espelhamento funcional confirmado pelo usuário na
+configuração registrada em [VALIDATION.md](VALIDATION.md). A matriz de apresentações
+e a compatibilidade geral permanecem pendentes. A avaliação inicial abaixo fundamentou
+a escolha da base; relatos dos autores upstream não foram tratados como validação local.
 
 | Base / fonte primária | Licença e avaliação |
 |---|---|
