@@ -246,3 +246,23 @@ nesta etapa. Há [relato primário de outro projeto](https://github.com/NuvioMed
 em Fire OS 8 de uso do ícone quadrado com margens e desconsideração do banner.
 Esse relato não prova o comportamento desta versão do OpenMirror no aparelho alvo.
 Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo launcher.
+
+### Experimento local 0.1.4 — cache e escolha do ícone
+
+- A captura real confirmou que o cartão continuava usando a arte escura antiga
+  depois de atualizar o APK e reiniciar o Fire TV.
+- Um alias de launcher com banner explícito também não atualizou essa imagem.
+- Após desinstalação autorizada e instalação limpa do APK assinado, a captura
+  confirmou o símbolo claro novo, ainda quadrado, com faixas cinzas laterais.
+  Portanto, a instalação limpa resolveu a imagem antiga, mas não o formato.
+- Fornecer a arte horizontal também em application icon e roundIcon foi testado:
+  a captura mostrou o banner comprimido horizontalmente em um quadrado, mantendo
+  as faixas cinzas laterais. O campo banner e o alias não contornaram esse
+  comportamento neste aparelho. Não é uma correção válida para o formato 16:9.
+- O APK experimental foi compilado e passou no lint. Devido a arquivos locais
+  descarregados pelo iCloud, o teste visual reutilizou o receptor nativo do APK
+  anterior; foi verificado que libairplay-jni.so permaneceu idêntica byte a byte.
+- O experimento não foi publicado. Manifesto e versão foram restaurados ao código
+  público 0.1.3, com ícone claro quadrado sem distorção. Uma instalação limpa da
+  versão pública foi escolhida como resultado final. Espelhamento após essa
+  reinstalação ainda precisa ser confirmado no iPhone.
