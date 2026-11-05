@@ -49,3 +49,14 @@ Um APK compilado não constitui validação de compatibilidade.
   pelo iPhone nem recepção de vídeo.
 - Decodificador AVC MediaTek inicializado, sem comprovação de quadros recebidos.
 - Teste de conexão/visualização pelo iPhone: aguardando execução pelo usuário.
+
+## Primeira sessão AirPlay observada
+
+- Conexão de transporte seguida de negociação `/fp-setup`, `SETUP`, `/info`,
+  `RECORD` e início de `raop_rtp_mirror`.
+- Parâmetros H.264 SPS/PPS recebidos e decodificador reconfigurado.
+- Marcadores `VIDEO_PACKET_RECEIVED` e `VIDEO_FRAME_RENDERED` observados.
+- Formato de saída inicial: área visível de 498 × 1080; callback do decodificador
+  confirma apresentação de quadro. Não foi usada captura de tela do conteúdo do usuário.
+- Confirmação visual do usuário, legibilidade de documentos e matriz de apresentações
+  ainda pendentes. Uma sessão não comprova compatibilidade geral com iOS/Fire OS.
