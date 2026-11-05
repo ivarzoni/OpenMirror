@@ -1,0 +1,22 @@
+.gradle/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+build/
+app/.cxx/
+*.log
+.mimosa/
+.worktrees/
+
+# Rebuilt dependencies, logs and secrets stay local.
+deps/.cache/
+deps/openssl-build/
+__pycache__/
+*.apk
+*.jks
+*.keystore
+*.pem
+*.p12
+.env

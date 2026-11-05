@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenMirror</string>
+    <string name="initializing">OpenMirror Presentation Edition — experimental
+Iniciando receptor local…</string>
+    <string name="waiting_for_connection">OpenMirror — experimental
+Anúncios mDNS registrados. Vídeo ainda não validado.
+No iPhone: Central de Controle → Espelhamento de Tela → OpenMirror.
+Mantenha este aplicativo aberto na TV. Mesma rede Wi-Fi.
+Pressione Voltar duas vezes para encerrar.\nGPLv3 — UxPlay / uxplay-android — sem garantia.\nCódigo e licenças: github.com/ivarzoni/OpenMirror</string>
+    <string name="start_failed">Falha ao iniciar ou registrar o receptor. Verifique a rede e os logs.</string>
+    <string name="press_back_again_to_exit">Pressione Voltar novamente para encerrar</string>
+</resources>
