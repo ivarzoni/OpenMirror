@@ -18,7 +18,7 @@ da tela e das mensagens do serviço.
 
 A tela de espera aparece antes de qualquer iPhone conectar. Não há mecanismo
 implementado que obtenha de forma confiável o idioma do iPhone para substituir
-a preferência do Fire TV. O nome de descoberta OpenMirror (experimental) é estável,
+a preferência do Fire TV. O nome de descoberta OpenMirror é estável,
 compartilhado entre a interface e o receptor e não traduzido.
 
 Os textos de versão são formatados com BuildConfig.VERSION_NAME. A identidade

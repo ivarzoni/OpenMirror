@@ -1,13 +1,13 @@
 # OpenMirror — Presentation Edition
 
-**[Baixar o APK beta para Fire TV](https://github.com/ivarzoni/OpenMirror/releases/download/v0.1.3-beta/OpenMirror-0.1.3.apk)**
+**[Baixar o APK para Fire TV](https://github.com/ivarzoni/OpenMirror/releases/download/v0.1.4/OpenMirror-0.1.4.apk)**
 · [Guia de instalação](docs/INSTALL-PT.md)
-· [Versão e arquivos](https://github.com/ivarzoni/OpenMirror/releases/tag/v0.1.3-beta)
+· [Versão e arquivos](https://github.com/ivarzoni/OpenMirror/releases/tag/v0.1.4)
 
 O APK é instalado no **Fire TV**. No iPhone, use o Espelhamento de Tela nativo.
-Não é preciso compilar o projeto para experimentar o beta.
+Não é preciso compilar o projeto para instalar o aplicativo.
 
-Receptor AirPlay experimental, gratuito, sem nuvem ou assinatura. Alvo: iPhone →
+Receptor AirPlay gratuito, sem nuvem ou assinatura. Alvo: iPhone →
 Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5 / Android 11.
 **Primeiro espelhamento de tela confirmado pelo usuário:** iPhone 15 Pro Max com
 iOS 27.2 → Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5, em 5 de novembro de 2026.
@@ -17,7 +17,9 @@ atual + próximo no iPhone confirmados pelo usuário. PowerPoint 2.115.2: espelh
 idêntico ao iPhone; notas no celular com slides separados na TV **não funcionaram no teste**.
 YouTube: usuário confirmou áudio na TV e imagem idêntica ao iPhone, após conectar
 pela Central de Controle → Espelhamento de Tela. Reprodução independente com
-controles apenas no celular não foi validada.
+controles apenas no celular pelo OpenMirror não foi validada. O usuário conseguiu
+reprodução direta por outro destino AirPlay, sem o OpenMirror aparecer na lista;
+esse resultado não constitui validação de envio direto para o OpenMirror.
 Fotos: modo de apresentação confirmado pelo usuário; vídeos de Fotos com áudio na TV.
 PDFs: espelhamento idêntico ao iPhone confirmado, sem comportamento especial de apresentação.
 Legibilidade medida, estabilidade prolongada e uso sem internet continuam pendentes.
@@ -37,7 +39,9 @@ Consulte [viabilidade e licenças](docs/FEASIBILITY.md), [arquitetura](docs/ARCH
 
 ## Ícone e idiomas
 
-A versão 0.1.3 traz cartão horizontal claro para Fire TV, símbolo maior e interface automática em
+A identidade visual inclui banner horizontal claro e símbolo maior. O launcher
+do aparelho testado usa o ícone quadrado com faixas cinzas laterais; não foi
+possível forçar o banner a preencher o cartão. A interface é automática em
 português, inglês, espanhol, francês e italiano, conforme o idioma do Fire TV.
 Para outros idiomas, a alternativa é inglês. Não depende do idioma do iPhone.
 Veja [localização](docs/LOCALIZATION.md).
@@ -88,7 +92,7 @@ python3 scripts/analyze_log.py teste.log
 ```
 
 Mantenha OpenMirror aberto na TV. Mac, TV e iPhone na mesma rede, sem isolamento
-entre clientes. No iPhone: Espelhamento de Tela → OpenMirror (experimental).
+entre clientes. No iPhone: Espelhamento de Tela → OpenMirror.
 Voltar duas vezes encerra o receptor. Sem boot automático ou permissão de sobreposição.
 Desative a depuração ADB ao terminar. ABI inicial: **armeabi-v7a**, confirmada pelo
 script antes da instalação; CPU 64 bits não comprova ABI do sistema operacional.

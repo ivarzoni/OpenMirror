@@ -279,3 +279,22 @@ Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo laun
   independente iniciada no botão AirPlay/transmissão do YouTube. O modo e o destino
   escolhidos pelo emissor precisam ser diferenciados antes de atribuir a causa
   ao receptor. Nenhum teste de envio direto foi realizado nesta confirmação.
+
+### Versão 0.1.4 — nome simplificado
+
+- Nome padrão anunciado por AirPlay/RAOP alterado para OpenMirror, sem o sufixo
+  experimental. Nome também atualizado nas instruções de conexão e no rodapé
+  dos cinco idiomas. versionName 0.1.4, versionCode 6.
+- Gradle assembleRelease + lintRelease passaram. Assinatura de distribuição
+  verificada e mantida; atualização instalada por ADB com preservação dos dados.
+- Código nativo não alterado: libairplay-jni.so do APK é idêntica byte a byte à
+  versão pública 0.1.3, compilada anteriormente com OpenSSL do fonte verificado.
+  Reutilização explícita desse artefato na compilação incremental, enquanto os
+  arquivos de desenvolvimento descarregados pelo iCloud eram recuperados.
+- No Fire TV alvo, versão 0.1.4 instalada e iniciada. Os registros do serviço
+  confirmaram anúncios AirPlay/RAOP com OpenMirror. Isso valida o nome anunciado,
+  não uma nova sessão de espelhamento; confirmação no iPhone solicitada.
+- SHA-256 do APK: aee20a3f78b621d9102b1af19493a0283a0115c1ca0e8833eb5cab42ea0bafcc.
+- Usuário confirmou reprodução direta do YouTube por outro destino AirPlay e
+  informou que OpenMirror não apareceu como opção. Essa reprodução não passou
+  pelo OpenMirror e não amplia sua compatibilidade validada.

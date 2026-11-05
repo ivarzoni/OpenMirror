@@ -14,7 +14,7 @@
     <string name="waiting_step_3_title">Choisissez OpenMirror</string>
     <string name="waiting_keep_open">Gardez cet écran ouvert pendant la connexion.</string>
     <string name="waiting_legal">GPLv3 · UxPlay / uxplay-android · sans garantie\ngithub.com/ivarzoni/OpenMirror</string>
-    <string name="waiting_exit">Version expérimentale %1$s  ·  Retour deux fois pour quitter</string>
+    <string name="waiting_exit">Version %1$s  ·  Retour deux fois pour quitter</string>
     <string name="waiting_diagram_description">Illustration d’un iPhone envoyant une image à un téléviseur.</string>
     <string name="notification_running">Démarrage d’OpenMirror</string>
     <string name="registration_timeout">Connexion trop longue. Vérifiez le Wi-Fi.</string>

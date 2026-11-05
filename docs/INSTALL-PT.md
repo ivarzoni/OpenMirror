@@ -1,7 +1,7 @@
 # Instalar o OpenMirror no Fire TV
 
 **O APK é instalado no Fire TV. No iPhone, use o Espelhamento de Tela nativo.**
-Esta é uma versão experimental. Veja o pacote e as limitações em [Releases](https://github.com/ivarzoni/OpenMirror/releases).
+Esta é uma versão inicial. Veja o pacote e as limitações em [Releases](https://github.com/ivarzoni/OpenMirror/releases).
 
 ANTES DE INSTALAR
 
@@ -16,7 +16,7 @@ INSTALAÇÃO SEM COMPUTADOR — CAMINHO SUGERIDO
 2. Abra o Downloader e acesse:
    https://github.com/ivarzoni/OpenMirror
    Na página, procure a seção de download/versões e selecione o arquivo
-   OpenMirror-0.1.3.apk. Não baixe Source code: isso é o código para desenvolvedores.
+   OpenMirror-0.1.4.apk. Não baixe Source code: isso é o código para desenvolvedores.
 3. Se a TV pedir permissão de instalação, abra Configurações > Meu Fire TV >
    Opções do desenvolvedor > Instalar aplicativos desconhecidos e permita o Downloader.
    Se as opções de desenvolvedor não aparecerem, entre em Sobre, pressione sete
@@ -35,7 +35,7 @@ COMO CONECTAR
 1. Conecte iPhone e Fire TV à mesma rede Wi-Fi.
 2. Abra o OpenMirror e mantenha a tela de instruções aberta na TV.
 3. No iPhone, abra a Central de Controle e toque em Espelhamento de Tela.
-4. Selecione OpenMirror (experimental).
+4. Selecione OpenMirror.
 5. Abra Fotos, seu leitor PDF ou o aplicativo que deseja mostrar.
    Para notas no celular e apenas o slide na TV, o Keynote foi validado.
 

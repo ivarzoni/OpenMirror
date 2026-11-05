@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">OpenMirror</string>
-    <string name="receiver_name" translatable="false">OpenMirror (experimental)</string>
+    <string name="receiver_name" translatable="false">OpenMirror</string>
     <string name="initializing">Starting…</string>
     <string name="waiting_for_connection">Ready to connect</string>
     <string name="start_failed">Check Wi-Fi and reopen OpenMirror</string>
@@ -16,7 +16,7 @@
     <string name="waiting_step_3_title">Choose OpenMirror</string>
     <string name="waiting_keep_open">Keep this screen open while connecting.</string>
     <string name="waiting_legal">GPLv3 · UxPlay / uxplay-android · no warranty\ngithub.com/ivarzoni/OpenMirror</string>
-    <string name="waiting_exit">Experimental %1$s  ·  Press Back twice to exit</string>
+    <string name="waiting_exit">Version %1$s  ·  Press Back twice to exit</string>
     <string name="waiting_diagram_description">Illustration of an iPhone sending a picture to a TV.</string>
     <string name="notification_running">OpenMirror is starting</string>
     <string name="registration_timeout">Connection setup timed out. Check Wi-Fi.</string>
