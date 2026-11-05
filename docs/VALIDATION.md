@@ -292,8 +292,9 @@ Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo laun
   Reutilização explícita desse artefato na compilação incremental, enquanto os
   arquivos de desenvolvimento descarregados pelo iCloud eram recuperados.
 - No Fire TV alvo, versão 0.1.4 instalada e iniciada. Os registros do serviço
-  confirmaram anúncios AirPlay/RAOP com OpenMirror. Isso valida o nome anunciado,
-  não uma nova sessão de espelhamento; confirmação no iPhone solicitada.
+  confirmaram anúncios AirPlay/RAOP com OpenMirror. Depois, o usuário confirmou
+  no iPhone o nome correto, sem experimental, e o espelhamento funcionando na
+  versão 0.1.4. Essa confirmação é de uma sessão real, além do anúncio mDNS.
 - SHA-256 do APK: aee20a3f78b621d9102b1af19493a0283a0115c1ca0e8833eb5cab42ea0bafcc.
 - Usuário confirmou reprodução direta do YouTube por outro destino AirPlay e
   informou que OpenMirror não apareceu como opção. Essa reprodução não passou
