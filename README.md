@@ -1,8 +1,8 @@
 # OpenMirror — Presentation Edition
 
-**[Baixar o APK para Fire TV](https://github.com/ivarzoni/OpenMirror/releases/download/v0.1.4/OpenMirror-0.1.4.apk)**
+**[Baixar o APK para Fire TV](https://github.com/ivarzoni/OpenMirror/releases)**
 · [Guia de instalação](docs/INSTALL-PT.md)
-· [Versão e arquivos](https://github.com/ivarzoni/OpenMirror/releases/tag/v0.1.4)
+· [Versão e arquivos](https://github.com/ivarzoni/OpenMirror/releases)
 
 O APK é instalado no **Fire TV**. No iPhone, use o Espelhamento de Tela nativo.
 Não é preciso compilar o projeto para instalar o aplicativo.
