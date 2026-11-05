@@ -23,3 +23,14 @@
 Warnings do build inicial: apenas ABI 32 bits; avisos de versão de XML SDK e APIs
 Android obsoletas. O protótipo é para sideload, não uma publicação Google Play.
 Um APK compilado não constitui validação de compatibilidade.
+
+## Primeiro contato com o aparelho
+
+- ADB autorizado: produto/device `karat`, modelo `AFTKM`.
+- Sistema confirmado por ADB: Android 11, API 30,
+  Fire OS 8.1.8.5 (RS8185/3898).
+- ABIs confirmadas: `armeabi-v7a,armeabi`; o APK ARMv7 corresponde ao sistema.
+- Instalação iniciada, ainda sem confirmação de sucesso. Transferência direta ficou
+  sem resposta; tentativa em duas etapas com transferência sem compressão em andamento.
+- A conexão de rede ficou intermitente durante o envio. Nenhuma sessão AirPlay
+  foi testada nesse contato. Não há evidência de descoberta ou vídeo no iPhone.
