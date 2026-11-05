@@ -38,7 +38,7 @@
   </LinearLayout>
   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/waiting_legal" android:textColor="#8FAAC2" android:textSize="10sp" android:lineSpacingExtra="3dp"/>
-   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waiting_exit" android:textColor="#8FAAC2" android:textSize="11sp"/>
+   <TextView android:id="@+id/version_footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waiting_exit" android:textColor="#8FAAC2" android:textSize="11sp"/>
   </LinearLayout>
  </LinearLayout>
 </merge>

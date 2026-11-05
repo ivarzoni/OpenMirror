@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="initializing">Iniciando…</string>
+    <string name="waiting_for_connection">Listo para conectar</string>
+    <string name="start_failed">Comprueba el Wi-Fi y vuelve a abrir OpenMirror</string>
+    <string name="press_back_again_to_exit">Pulsa Atrás otra vez para salir</string>
+    <string name="waiting_title">Del iPhone\na tu televisor.</string>
+    <string name="waiting_subtitle">Fotos, vídeos y presentaciones.\nA través de tu red Wi-Fi.</string>
+    <string name="waiting_steps_title">Conecta en tres pasos</string>
+    <string name="waiting_step_1_title">Usa la misma red Wi-Fi</string>
+    <string name="waiting_step_1_detail">Conecta el iPhone y el Fire TV a la misma red.</string>
+    <string name="waiting_step_2_title">Abre el Centro de control</string>
+    <string name="waiting_step_2_detail">En el iPhone, toca Duplicar pantalla.</string>
+    <string name="waiting_step_3_title">Elige OpenMirror</string>
+    <string name="waiting_keep_open">Mantén esta pantalla abierta mientras conectas.</string>
+    <string name="waiting_legal">GPLv3 · UxPlay / uxplay-android · sin garantía\ngithub.com/ivarzoni/OpenMirror</string>
+    <string name="waiting_exit">Versión experimental %1$s  ·  Pulsa Atrás dos veces para salir</string>
+    <string name="waiting_diagram_description">Ilustración de un iPhone enviando una imagen al televisor.</string>
+    <string name="notification_running">Iniciando OpenMirror</string>
+    <string name="registration_timeout">Se agotó el tiempo de conexión. Comprueba el Wi-Fi.</string>
+    <string name="registration_failed">No se pudo iniciar el receptor. Comprueba el Wi-Fi.</string>
+    <string name="notification_ready">Listo para conectar</string>
+</resources>

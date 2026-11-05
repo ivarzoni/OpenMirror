@@ -50,7 +50,7 @@ public class AirPlayService extends Service implements NativeBridge.Listener {
         /* 开机自启后用户再打开界面时会重复进入：服务已在运行且就绪时不重置状态 */
         boolean fresh = !running;
         running = true;
-        startForeground(NOTIF_ID, notif("OpenMirror experimental em execução"));
+        startForeground(NOTIF_ID, notif(getString(R.string.notification_running)));
         NativeBridge.setListener(this);
         /* 后台服务在会话接入时自动唤起画面（Android 10+ 后台启动 Activity 需 appops 授予悬浮窗权限） */
         NativeBridge.setSessionListener(null); // Prototype runs with the TV activity open.
@@ -89,7 +89,7 @@ public class AirPlayService extends Service implements NativeBridge.Listener {
             if (raopState == 0 || airplayState == 0) {
                 android.util.Log.e("AirPlay", "mDNS 注册超时：NsdManager 无响应（网络或 ROM 异常）");
                 NativeBridge.setServiceState(NativeBridge.STATE_FAILED);
-                nm().notify(NOTIF_ID, notif("Tempo esgotado ao registrar mDNS"));
+                nm().notify(NOTIF_ID, notif(getString(R.string.registration_timeout)));
             }
         };
         mainHandler.postDelayed(registerTimeout, REGISTER_TIMEOUT_MS);
@@ -103,11 +103,10 @@ public class AirPlayService extends Service implements NativeBridge.Listener {
         if (raopState == 1 && airplayState == 1) {
             android.util.Log.i("OpenMirror", "MDNS_REGISTERED");
             NativeBridge.setServiceState(NativeBridge.STATE_READY);
-            String n = serviceName;
-            nm().notify(NOTIF_ID, notif("Anúncios mDNS registrados; aguardando sessão" + (n != null ? "（" + n + "）" : "")));
+            nm().notify(NOTIF_ID, notif(getString(R.string.notification_ready)));
         } else {
             NativeBridge.setServiceState(NativeBridge.STATE_FAILED);
-            nm().notify(NOTIF_ID, notif("Falha ao registrar mDNS"));
+            nm().notify(NOTIF_ID, notif(getString(R.string.registration_failed)));
         }
     }
 

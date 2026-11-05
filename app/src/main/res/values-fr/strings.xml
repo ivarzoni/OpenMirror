@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="initializing">Démarrage…</string>
+    <string name="waiting_for_connection">Prêt à se connecter</string>
+    <string name="start_failed">Vérifiez le Wi-Fi et rouvrez OpenMirror</string>
+    <string name="press_back_again_to_exit">Appuyez à nouveau sur Retour pour quitter</string>
+    <string name="waiting_title">De l’iPhone\nà votre TV.</string>
+    <string name="waiting_subtitle">Photos, vidéos et présentations.\nVia votre réseau Wi-Fi.</string>
+    <string name="waiting_steps_title">Connectez-vous en trois étapes</string>
+    <string name="waiting_step_1_title">Utilisez le même réseau Wi-Fi</string>
+    <string name="waiting_step_1_detail">Connectez l’iPhone et le Fire TV au même réseau.</string>
+    <string name="waiting_step_2_title">Ouvrez le Centre de contrôle</string>
+    <string name="waiting_step_2_detail">Sur l’iPhone, touchez Recopie de l’écran.</string>
+    <string name="waiting_step_3_title">Choisissez OpenMirror</string>
+    <string name="waiting_keep_open">Gardez cet écran ouvert pendant la connexion.</string>
+    <string name="waiting_legal">GPLv3 · UxPlay / uxplay-android · sans garantie\ngithub.com/ivarzoni/OpenMirror</string>
+    <string name="waiting_exit">Version expérimentale %1$s  ·  Retour deux fois pour quitter</string>
+    <string name="waiting_diagram_description">Illustration d’un iPhone envoyant une image à un téléviseur.</string>
+    <string name="notification_running">Démarrage d’OpenMirror</string>
+    <string name="registration_timeout">Connexion trop longue. Vérifiez le Wi-Fi.</string>
+    <string name="registration_failed">Impossible de démarrer le récepteur. Vérifiez le Wi-Fi.</string>
+    <string name="notification_ready">Prêt à se connecter</string>
+</resources>

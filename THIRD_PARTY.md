@@ -20,3 +20,10 @@ scripts correspondentes devem acompanhar distribuições de APK.
 Modificações OpenMirror (2026): identificação, UI em português, instrumentação de
 quadros exibidos, separação de evidências, remoção de gravação PCM, boot e sobreposição,
 fixação de ferramentas, scripts, testes e documentação. Código derivado GPL-3.0.
+
+
+Identidade visual OpenMirror (2026): desenho original em branding/mark.json e SVG,
+exportadores nativos em scripts/render_branding.py e render_branding.swift, ícones,
+banners e traduções da interface. Esses arquivos permanecem sob a licença GPL-3.0
+do projeto. Fontes do sistema são usadas apenas na exportação; não são distribuídos
+arquivos de fontes nem há dependências gráficas externas no aplicativo.

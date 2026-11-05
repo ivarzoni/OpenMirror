@@ -2,8 +2,16 @@ plugins {
     id 'com.android.application'
 }
 
+// Optional private signing configuration; never commit this file or its key.
+def distributionSigning = new Properties()
+def signingFilePath = providers.gradleProperty('openmirrorSigningProperties').orNull
+if (signingFilePath != null) {
+    file(signingFilePath).withInputStream { distributionSigning.load(it) }
+}
+
 android {
     namespace 'com.codelphi.airplay'
+    buildFeatures { buildConfig true }
 
     compileSdk 34
     ndkVersion '26.3.11579264'
@@ -12,8 +20,8 @@ android {
         applicationId 'org.openmirror.presentation'
         minSdk 24
         targetSdk 34
-        versionCode 2
-        versionName '0.1.1-experimental'
+        versionCode 3
+        versionName '0.1.2-experimental'
 
         ndk { abiFilters 'armeabi-v7a' }
 
@@ -32,13 +40,26 @@ android {
         }
     }
 
+    signingConfigs {
+        if (signingFilePath != null) {
+            create('distribution') {
+                storeFile file(distributionSigning.getProperty('storeFile'))
+                storePassword distributionSigning.getProperty('storePassword')
+                keyAlias distributionSigning.getProperty('keyAlias')
+                keyPassword distributionSigning.getProperty('keyPassword')
+            }
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
         }
         release {
             minifyEnabled false
-
+            if (signingFilePath != null) {
+                signingConfig signingConfigs.distribution
+            }
         }
     }
 

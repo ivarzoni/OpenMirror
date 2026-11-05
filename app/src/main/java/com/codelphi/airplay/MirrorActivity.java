@@ -52,6 +52,8 @@ public class MirrorActivity extends Activity {
         surfaceView = findViewById(R.id.surface);
         status = findViewById(R.id.status);
         waitingPanel = findViewById(R.id.waiting_panel);
+        ((TextView) findViewById(R.id.version_footer)).setText(getString(
+                R.string.waiting_exit, BuildConfig.VERSION_NAME.replace("-experimental", "")));
 
         NativeBridge.setSessionEndListener(sessionEndListener);
         /* 解码器报出真实分辨率后按比例重排 SurfaceView：保持宽高比居中，多余部分留黑边，绝不拉伸 */

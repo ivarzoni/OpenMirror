@@ -8,7 +8,8 @@ modelo AFTKM, Fire OS 8.1.8.5 / Android 11 (confirmados por ADB). Logs do recept
 registraram negociação, vídeo H.264 recebido e callback de quadro exibido. Instalação
 concluída e integridade do APK conferida. Conteúdo correto confirmado pelo relato do usuário.
 
-PowerPoint espelhado e áudio do YouTube na TV foram confirmados pelo usuário;
+Keynote com slide em tela cheia na TV e notas/controles separados no iPhone foi
+confirmado pelo usuário. PowerPoint espelhado e áudio do YouTube na TV foram confirmados;
 modo com notas privadas no celular e slides separados na TV não funcionou no teste.
 Fotos: apresentação e vídeos com áudio na TV confirmados pelo usuário. PDFs: tela
 espelhada idêntica ao iPhone, sem modo próprio de apresentação, confirmado pelo usuário.
@@ -142,3 +143,56 @@ mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicion
 - Reconexão do iPhone após a alteração de interface confirmada pelo usuário:
   o painel de instruções desaparece e o espelhamento continua funcionando normalmente.
   Isso verifica a transição da nova tela de espera para o vídeo na configuração testada.
+
+## Keynote e PowerPoint 2.115.2 — teste comparativo
+
+- Usuário confirmou Keynote funcionando com próximo slide, notas e atual + próximo
+  no celular; a TV mostra apenas o slide em tela cheia e o controle fica no iPhone.
+- Versão do Keynote não informada. Não foi confirmada a extensão/formato do arquivo.
+- PowerPoint informado pelo usuário: 2.115.2. A apresentação havia sido iniciada
+  pelo botão de reproduzir, e não apenas deixada na edição.
+- Há relatos de usuários da mesma versão com falha de saída externa em Apple TV
+  e HDMI no [Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/6059889/ios-powerpoint-update-broke-native-airplay-full-sc),
+  publicados em 3–4 de novembro de 2026. São relatos de usuários, sem confirmação
+  oficial de causa ou correção pela Microsoft. Não tratamos respostas do fórum
+  como diagnóstico oficial.
+- Inferência de engenharia: regressão/interação do PowerPoint com iOS é uma hipótese
+  forte; o fluxo com conteúdo diferente nas duas telas funciona com Keynote neste
+  receptor. Isso não demonstra que todo caminho de negociação do PowerPoint esteja
+  correto nem fornece uma correção no APK para o aplicativo Microsoft.
+- PowerPoint nativo com notas separadas continua pendente. O código de protocolo
+  não foi alterado com base apenas nessa hipótese.
+
+## Versão 0.1.2 — ícone, banner e idiomas
+
+- Ícone original com telefone + TV, versões PNG por densidade, adaptativo (API 26+)
+  e monocromático (API 33+). Banner Fire TV traduzido nas cinco línguas.
+- Interface e mensagens em inglês (padrão/alternativa), português, espanhol, francês
+  e italiano. Escolha pelos recursos nativos do Fire TV, não pelo idioma do iPhone.
+- Integridade dos conjuntos de textos e do marcador de versão conferida para todos
+  os idiomas; configurações de recursos confirmadas no APK com aapt. Lint: zero
+  erros e zero MissingTranslation. Build assembleDebug + lintDebug: sucesso, 5s.
+- APK instalado após conferir SHA-256 na TV:
+  `d2f3942eb7d8804fd256233b2a50fcb62d0903b58c1cadde237f246f57e04398`.
+- Sistema de teste informa pt-BR: interface selecionou português sem intervenção
+  manual no aplicativo. Processo ativo, anúncios registrados e sem falha fatal
+  no trecho de inicialização examinado. Tela em primeiro plano conferida em 1920 × 1080.
+- Outros quatro idiomas foram conferidos nos recursos e na compilação, mas não
+  visualmente no Fire TV. Não alteramos o idioma global da TV durante o teste.
+- Protocolo AirPlay e decodificação não foram alterados nesta versão. Os testes de
+  conteúdo/Keynote relatados anteriormente correspondem às versões anteriores.
+
+## Pacote de distribuição 0.1.2
+
+- Build release com chave própria, distinta da assinatura debug. Chave e senhas
+  privadas fora do repositório. Identidade pública: CN=OpenMirror, OU=Personal Project.
+- assembleRelease + lintRelease: BUILD SUCCESSFUL, 11s. APK não depurável,
+  pacote org.openmirror.presentation, versionCode 3, minSdk 24, targetSdk 34, ARMv7.
+- apksigner verify confirmou assinatura v2 válida. SHA-256 do certificado:
+  `9d82f8d39b118a8ca066fbbe12db7a62fc0c42ec40aab4e2a3429702cb06b7ee`.
+- SHA-256 do APK de distribuição:
+  `9bfa6a8fbc7d219127d3a587c9b667e54fc0d66c935fc9fc038c073872946415`.
+- Kit preparado com APK, guia, GPL e hash. Guia distingue a instalação por
+  Downloader sugerida da instalação ADB já testada.
+- Instalação do APK com a chave pública nova no Fire TV: aguardando autorização
+  para trocar a assinatura da versão interna. Não foi executada desinstalação.

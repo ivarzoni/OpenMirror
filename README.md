@@ -5,8 +5,9 @@ Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5 / Android 11.
 **Primeiro espelhamento de tela confirmado pelo usuário:** iPhone 15 Pro Max com
 iOS 27.2 → Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5, em 5 de novembro de 2026.
 Os logs também confirmaram negociação, recepção H.264 e quadro exibido pelo decodificador.
-PowerPoint: espelhamento idêntico ao iPhone confirmado pelo usuário; notas no celular
-com slides separados na TV **não funcionaram no teste**. YouTube: áudio na TV confirmado
+Keynote: apresentação em tela cheia na TV e modos de notas, próximo slide e
+atual + próximo no iPhone confirmados pelo usuário. PowerPoint 2.115.2: espelhamento
+idêntico ao iPhone; notas no celular com slides separados na TV **não funcionaram no teste**. YouTube: áudio na TV confirmado
 pelo usuário; não foi determinado se o aplicativo usou espelhamento ou envio direto.
 Fotos: modo de apresentação confirmado pelo usuário; vídeos de Fotos com áudio na TV.
 PDFs: espelhamento idêntico ao iPhone confirmado, sem comportamento especial de apresentação.
@@ -24,6 +25,15 @@ Não é um anúncio mDNS vazio. **Nome visível no iPhone não comprova espelham
 
 Consulte [viabilidade e licenças](docs/FEASIBILITY.md), [arquitetura](docs/ARCHITECTURE.md),
 [testes no aparelho](docs/TESTING.md) e [validação realizada](docs/VALIDATION.md).
+
+## Ícone e idiomas
+
+A versão 0.1.2 traz ícone próprio, banner para Fire TV e interface automática em
+português, inglês, espanhol, francês e italiano, conforme o idioma do Fire TV.
+Para outros idiomas, a alternativa é inglês. Não depende do idioma do iPhone.
+Veja [localização](docs/LOCALIZATION.md).
+
+![Identidade do OpenMirror no Fire TV](branding/tv-banner-preview.png)
 
 ## Tela de conexão
 
