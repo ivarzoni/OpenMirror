@@ -237,3 +237,12 @@ mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicion
 - Protocolo e decodificação não alterados. Arte horizontal clara revisada no arquivo
   em 640 × 360, sem cortes no nome ou símbolo. A captura da biblioteca do Fire TV
   não foi concluída; confirmação da aparência nessa lista solicitada ao usuário.
+
+### Aparência no launcher Fire TV
+
+A arte horizontal está incluída no pacote e os ícones menores foram clareados e
+ampliados. A forma exata como o launcher do Fire TV exibe um APK não foi confirmada
+nesta etapa. Há [relato primário de outro projeto](https://github.com/NuvioMedia/NuvioTV/issues/2347)
+em Fire OS 8 de uso do ícone quadrado com margens e desconsideração do banner.
+Esse relato não prova o comportamento desta versão do OpenMirror no aparelho alvo.
+Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo launcher.
