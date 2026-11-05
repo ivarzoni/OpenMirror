@@ -1,10 +1,84 @@
 {
-  "background": "#0B1D31",
+  "background": "#EAF8F5",
   "shapes": [
-    {"type":"rect","rect":[31,30,52,37],"radius":6,"fill":"#173B53","stroke":"#DCEBF5","width":4},
-    {"type":"polygon","points":[[54,40],[65,48.5],[54,57]],"fill":"#75E2C9"},
-    {"type":"line","points":[[57,68],[57,75],[71,75]],"stroke":"#DCEBF5","width":4},
-    {"type":"rect","rect":[24,48,20,33],"radius":5,"fill":"#0B1D31","stroke":"#75E2C9","width":4},
-    {"type":"line","points":[[31,73],[37,73]],"stroke":"#75E2C9","width":2.5}
-  ]
+    {
+      "type": "rect",
+      "rect": [
+        31,
+        30,
+        52,
+        37
+      ],
+      "radius": 6,
+      "fill": "#F8FCFF",
+      "stroke": "#224B66",
+      "width": 4
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          54,
+          40
+        ],
+        [
+          65,
+          48.5
+        ],
+        [
+          54,
+          57
+        ]
+      ],
+      "fill": "#17B9A2"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          57,
+          68
+        ],
+        [
+          57,
+          75
+        ],
+        [
+          71,
+          75
+        ]
+      ],
+      "stroke": "#224B66",
+      "width": 4
+    },
+    {
+      "type": "rect",
+      "rect": [
+        24,
+        48,
+        20,
+        33
+      ],
+      "radius": 5,
+      "fill": "#F5FFFC",
+      "stroke": "#17B9A2",
+      "width": 4
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          31,
+          73
+        ],
+        [
+          37,
+          73
+        ]
+      ],
+      "stroke": "#17B9A2",
+      "width": 2.5
+    }
+  ],
+  "legacyScale": 1.25
 }

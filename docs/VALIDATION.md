@@ -224,3 +224,16 @@ mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicion
   oficial da Microsoft. Não modificamos o protocolo por tentativa sem validação.
 - APK público testado por ADB e confirmado visualmente com Keynote. Caminho pelo
   Downloader ainda não executado, apesar de documentado como sugestão de instalação.
+
+## Versão 0.1.3 — revisão do cartão horizontal
+
+- A pedido do usuário, cartão Fire TV redesenhado em 640 × 360 com fundo claro,
+  telefone/TV e nome ampliados, ocupando quase toda a área. Cinco banners traduzidos.
+- Ícones menores também receberam cores claras e símbolo maior. A área segura do
+  ícone adaptativo foi mantida; o cartão horizontal não usa a máscara quadrada.
+- Build assinado assembleRelease + lintRelease: sucesso em 9s. Atualização instalada
+  por pm install -r, com a mesma chave pública, preservando dados e sem desinstalação.
+- SHA-256 do APK: `8dda1953bedafbc31168409779b7329c280796735032af991c7a4a2942079d72`.
+- Protocolo e decodificação não alterados. Arte horizontal clara revisada no arquivo
+  em 640 × 360, sem cortes no nome ou símbolo. A captura da biblioteca do Fire TV
+  não foi concluída; confirmação da aparência nessa lista solicitada ao usuário.

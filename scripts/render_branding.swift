@@ -23,6 +23,10 @@ func drawMark(_ ctx: CGContext, _ x: CGFloat, _ y: CGFloat, _ size: CGFloat, bac
         ctx.addPath(CGPath(roundedRect: CGRect(x: 0, y: 0, width: 108, height: 108), cornerWidth: 24, cornerHeight: 24, transform: nil))
         ctx.fillPath()
     }
+    if background {
+        let scale = mark["legacyScale"] as? CGFloat ?? 1
+        ctx.translateBy(x:54,y:54); ctx.scaleBy(x:scale,y:scale); ctx.translateBy(x:-54,y:-54)
+    }
     for s in shapes {
         let path = CGMutablePath()
         let type = s["type"] as! String
@@ -68,9 +72,27 @@ let preview=canvas(512,512); drawMark(preview,0,0,512,background:true)
 try save(preview,"branding/icon-preview.png")
 func makeBanner(_ tagline: String) -> CGContext {
     let banner=canvas(640,360)
-    let gradient=CGGradient(colorsSpace:CGColorSpaceCreateDeviceRGB(),colors:[color("#0B1D31"),color("#173D54")] as CFArray,locations:[0,1])!
+    let gradient=CGGradient(colorsSpace:CGColorSpaceCreateDeviceRGB(),colors:[color("#D9FAF3"),color("#EDF2FF")] as CFArray,locations:[0,1])!
     banner.drawLinearGradient(gradient,start:CGPoint(x:0,y:0),end:CGPoint(x:640,y:360),options:[])
-    drawMark(banner,18,74,218,background:false)
+    func rectangle(_ x:CGFloat,_ y:CGFloat,_ w:CGFloat,_ h:CGFloat,_ radius:CGFloat,_ fill:String,_ stroke:String?=nil,_ line:CGFloat=0) {
+        let p=CGPath(roundedRect:CGRect(x:x,y:y,width:w,height:h),cornerWidth:radius,cornerHeight:radius,transform:nil)
+        banner.addPath(p); banner.setFillColor(color(fill)); banner.fillPath()
+        if let stroke=stroke { banner.addPath(p); banner.setStrokeColor(color(stroke)); banner.setLineWidth(line); banner.strokePath() }
+    }
+    func line(_ points:[CGPoint],_ hex:String,_ width:CGFloat) {
+        banner.beginPath(); banner.move(to:points[0]); points.dropFirst().forEach { banner.addLine(to:$0) }
+        banner.setStrokeColor(color(hex)); banner.setLineWidth(width); banner.setLineCap(.round); banner.setLineJoin(.round); banner.strokePath()
+    }
+    rectangle(34,27,584,278,28,"#BEDDDE")
+    rectangle(28,20,584,278,28,"#F8FCFF","#224B66",14)
+    line([CGPoint(x:320,y:305),CGPoint(x:320,y:337)],"#224B66",14)
+    line([CGPoint(x:242,y:337),CGPoint(x:398,y:337)],"#224B66",14)
+    rectangle(22,128,124,212,22,"#A0D7CF")
+    rectangle(16,120,124,220,22,"#F5FFFC","#17B9A2",12)
+    line([CGPoint(x:54,y:140),CGPoint(x:102,y:140)],"#224B66",6)
+    rectangle(36,160,84,132,8,"#B5EFE4")
+    banner.beginPath(); banner.move(to:CGPoint(x:64,y:203)); banner.addLine(to:CGPoint(x:98,y:225)); banner.addLine(to:CGPoint(x:64,y:247)); banner.closePath(); banner.setFillColor(color("#224B66")); banner.fillPath()
+    line([CGPoint(x:58,y:321),CGPoint(x:98,y:321)],"#224B66",6)
     func text(_ value:String,_ x:CGFloat,_ baseline:CGFloat,_ size:CGFloat,_ hex:String,_ bold:Bool=false) {
         banner.saveGState(); banner.translateBy(x:x,y:baseline); banner.scaleBy(x:1,y:-1)
         let font=CTFontCreateWithName((bold ? "HelveticaNeue-Bold" : "HelveticaNeue") as CFString,size,nil)
@@ -78,9 +100,8 @@ func makeBanner(_ tagline: String) -> CGContext {
         let line=CTLineCreateWithAttributedString(NSAttributedString(string:value,attributes:attrs as [NSAttributedString.Key:Any]))
         banner.textPosition=CGPoint(x:0,y:0); CTLineDraw(line,banner); banner.restoreGState()
     }
-    text("OpenMirror",232,166,54,"#F3F8FC",true)
-    text(tagline,234,207,24,"#BCD0DF")
-    text("PRESENTATION EDITION",235,246,14,"#75E2C9")
+    text("OpenMirror",165,155,76,"#224B66",true)
+    text(tagline,170,207,28,"#417084")
     return banner
 }
 for (language, tagline) in [("", "From iPhone to TV"), ("pt", "Do iPhone para a TV"), ("es", "Del iPhone a tu TV"), ("fr", "De l’iPhone à la TV"), ("it", "Dall’iPhone alla TV")] {

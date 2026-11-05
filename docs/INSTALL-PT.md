@@ -16,7 +16,7 @@ INSTALAÇÃO SEM COMPUTADOR — CAMINHO SUGERIDO
 2. Abra o Downloader e acesse:
    https://github.com/ivarzoni/OpenMirror
    Na página, procure a seção de download/versões e selecione o arquivo
-   OpenMirror-0.1.2.apk. Não baixe Source code: isso é o código para desenvolvedores.
+   OpenMirror-0.1.3.apk. Não baixe Source code: isso é o código para desenvolvedores.
 3. Se a TV pedir permissão de instalação, abra Configurações > Meu Fire TV >
    Opções do desenvolvedor > Instalar aplicativos desconhecidos e permita o Downloader.
    Se as opções de desenvolvedor não aparecerem, entre em Sobre, pressione sete
