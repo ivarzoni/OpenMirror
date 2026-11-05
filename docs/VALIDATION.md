@@ -17,7 +17,8 @@
 - Conexão ADB ao aparelho informado: porta 5555 recusou conexão; instalação pendente.
 - Quatro testes de classificação de evidências: passaram. Não são testes de AirPlay.
 - ADB: nenhum dispositivo conectado na primeira inspeção.
-- Instalação, descoberta no iPhone, handshake, vídeo e apresentação: NÃO TESTADOS.
+- Na inspeção inicial, instalação e sessão AirPlay não haviam sido testadas;
+  resultados posteriores abaixo.
 - Modelo de iPhone e versão iOS ainda não informados.
 
 Warnings do build inicial: apenas ABI 32 bits; avisos de versão de XML SDK e APIs
@@ -36,3 +37,15 @@ Um APK compilado não constitui validação de compatibilidade.
 - A reconexão posterior excedeu 15 segundos sem resposta. Instalação não confirmada.
 - A conexão de rede ficou intermitente durante o envio. Nenhuma sessão AirPlay
   foi testada nesse contato. Não há evidência de descoberta ou vídeo no iPhone.
+
+## Instalação após reconectar o Fire TV à rede
+
+- APK enviado novamente, com integridade confirmada por SHA-256 nos dois lados:
+  `1189e0836d7e3ea7914de82786d3b4fafba64ec32e7377394db7dd85a6931fad`.
+- `pm install -r`: Success. Atividade OpenMirror aberta e confirmada em primeiro plano.
+- Processo permaneceu ativo; captura da tela de espera confirmada.
+- Núcleo UxPlay iniciou o servidor; ambas as inscrições NSD concluíram.
+  Marcador `MDNS_REGISTERED` observado. Isso comprova registro local, não descoberta
+  pelo iPhone nem recepção de vídeo.
+- Decodificador AVC MediaTek inicializado, sem comprovação de quadros recebidos.
+- Teste de conexão/visualização pelo iPhone: aguardando execução pelo usuário.
