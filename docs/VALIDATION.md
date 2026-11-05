@@ -139,4 +139,6 @@ mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicion
   concluído e nenhum FATAL EXCEPTION no registro de inicialização inspecionado.
 - Captura visual da tela de espera em 1920 × 1080 revisada: textos e ilustração
   íntegros, sem sobreposição ou cortes. Imagem em docs/images/waiting-screen.png.
-- Reconexão do iPhone após a alteração de interface: aguardando confirmação do usuário.
+- Reconexão do iPhone após a alteração de interface confirmada pelo usuário:
+  o painel de instruções desaparece e o espelhamento continua funcionando normalmente.
+  Isso verifica a transição da nova tela de espera para o vídeo na configuração testada.
