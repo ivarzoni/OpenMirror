@@ -27,7 +27,8 @@ Esse caminho pelo Downloader é sugerido com base no funcionamento documentado
 pelo seu desenvolvedor; ainda não foi testado por nós nesta versão. Algumas versões
 Fire OS têm diferenças no menu. Se não aparecer a permissão, consulte o guia no GitHub.
 Para esse caminho não é necessário ativar ADB. Não abra portas no roteador.
-A instalação que validamos no nosso Fire TV foi feita por ADB, com um computador.
+O APK público assinado foi instalado por ADB e validado com Keynote. O caminho
+pelo Downloader ainda precisa de teste separado.
 
 COMO CONECTAR
 

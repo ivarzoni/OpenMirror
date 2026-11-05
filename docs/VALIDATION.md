@@ -194,5 +194,33 @@ mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicion
   `9bfa6a8fbc7d219127d3a587c9b667e54fc0d66c935fc9fc038c073872946415`.
 - Kit preparado com APK, guia, GPL e hash. Guia distingue a instalação por
   Downloader sugerida da instalação ADB já testada.
-- Instalação do APK com a chave pública nova no Fire TV: aguardando autorização
-  para trocar a assinatura da versão interna. Não foi executada desinstalação.
+- Após autorização expressa do usuário, versão debug removida e APK público exato
+  instalado: uninstall e pm install retornaram Success. Atividade aberta, servidor
+  iniciado e anúncios registrados. Chaves locais do receptor foram recriadas.
+- Teste do binário público exato confirmado: recepção e quadro exibido, seguido de
+  vídeo em 1920 × 1080. O usuário confirmou que o Keynote continuou funcionando
+  perfeitamente, com apenas o slide na TV e notas/controles no iPhone.
+
+## Repetição do teste PowerPoint 2.115.2
+
+- Usuário repetiu a apresentação pelo botão de reproduzir e confirmou que a TV
+  continuou mostrando a mesma tela do iPhone.
+- Vídeo chegou e foi apresentado; formatos visíveis registrados pelo decodificador:
+  498 × 1080, depois 1920 × 886, retornando a 498 × 1080. Proporções compatíveis
+  com a tela do iPhone nas orientações retrato e paisagem, em vez de slide 16:9.
+- Não houve correção de PowerPoint nem alteração experimental de capacidades nesta
+  etapa. A causa exata ainda exige comparação com a sessão de apresentação do Keynote;
+  logs não revelam por si só qual tela o aplicativo decidiu renderizar.
+
+## Comparação concluída e liberação do beta
+
+- No binário público assinado, a sessão de apresentação do Keynote produziu área
+  visível de 1920 × 1080. Usuário confirmou funcionamento e separação das telas.
+- No teste PowerPoint 2.115.2, as áreas recebidas seguiram as proporções do iPhone
+  (498 × 1080 / 1920 × 886), com relato de tela idêntica na TV. O fluxo chegou ao
+  decodificador; não há evidência de que um slide separado tenha sido enviado nesse teste.
+- Não há correção validada de PowerPoint no OpenMirror. A hipótese de regressão do
+  aplicativo/iOS permanece; não afirmamos impossibilidade técnica nem diagnóstico
+  oficial da Microsoft. Não modificamos o protocolo por tentativa sem validação.
+- APK público testado por ADB e confirmado visualmente com Keynote. Caminho pelo
+  Downloader ainda não executado, apesar de documentado como sugestão de instalação.

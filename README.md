@@ -1,5 +1,12 @@
 # OpenMirror — Presentation Edition
 
+**[Baixar o APK beta para Fire TV](https://github.com/ivarzoni/OpenMirror/releases/download/v0.1.2-beta/OpenMirror-0.1.2.apk)**
+· [Guia de instalação](docs/INSTALL-PT.md)
+· [Versão e arquivos](https://github.com/ivarzoni/OpenMirror/releases/tag/v0.1.2-beta)
+
+O APK é instalado no **Fire TV**. No iPhone, use o Espelhamento de Tela nativo.
+Não é preciso compilar o projeto para experimentar o beta.
+
 Receptor AirPlay experimental, gratuito, sem nuvem ou assinatura. Alvo: iPhone →
 Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5 / Android 11.
 **Primeiro espelhamento de tela confirmado pelo usuário:** iPhone 15 Pro Max com
