@@ -31,6 +31,8 @@ Um APK compilado não constitui validação de compatibilidade.
   Fire OS 8.1.8.5 (RS8185/3898).
 - ABIs confirmadas: `armeabi-v7a,armeabi`; o APK ARMv7 corresponde ao sistema.
 - Instalação iniciada, ainda sem confirmação de sucesso. Transferência direta ficou
-  sem resposta; tentativa em duas etapas com transferência sem compressão em andamento.
+  sem resposta. A tentativa em duas etapas informou envio de 6.881.027 bytes, mas
+  terminou com EOF antes da confirmação; integridade remota não confirmada.
+- A reconexão posterior excedeu 15 segundos sem resposta. Instalação não confirmada.
 - A conexão de rede ficou intermitente durante o envio. Nenhuma sessão AirPlay
   foi testada nesse contato. Não há evidência de descoberta ou vídeo no iPhone.
