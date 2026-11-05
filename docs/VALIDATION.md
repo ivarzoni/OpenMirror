@@ -8,8 +8,10 @@ modelo AFTKM, Fire OS 8.1.8.5 / Android 11 (confirmados por ADB). Logs do recept
 registraram negociação, vídeo H.264 recebido e callback de quadro exibido. Instalação
 concluída e integridade do APK conferida. Conteúdo correto confirmado pelo relato do usuário.
 
-Ainda não validados: Fotos, PDF, apresentação PowerPoint, nitidez de texto, rotação,
-slide parado, reconexões repetidas, sessão de 10 minutos, áudio e funcionamento sem WAN.
+PowerPoint espelhado e áudio do YouTube na TV foram confirmados pelo usuário;
+modo com notas privadas no celular e slides separados na TV não funcionou no teste.
+Ainda não validados: Fotos, PDF, nitidez de texto, rotação, slide parado, reconexões
+repetidas, sessão de 10 minutos, sincronismo/estabilidade de áudio e uso sem WAN.
 Os registros a seguir mostram a sequência dos testes, incluindo tentativas anteriores.
 
 ## Ambiente e inspeção inicial
@@ -77,3 +79,35 @@ Um APK compilado não constitui validação de compatibilidade.
   inspecionada diretamente por ferramenta.
 - Legibilidade de documentos e matriz de apresentações ainda pendentes. Uma sessão
   não comprova compatibilidade geral com iOS/Fire OS.
+
+## PowerPoint e YouTube — relato adicional do usuário
+
+- Mesma configuração: iPhone 15 Pro Max, iOS 27.2, Fire OS 8.1.8.5.
+- PowerPoint exibiu na TV exatamente a mesma tela do iPhone. A experiência desejada
+  (notas privadas no celular e apenas slide grande na TV) não foi obtida.
+- Não atribuímos a causa exclusivamente ao receptor nem ao PowerPoint sem teste
+  comparativo. Versão/build do PowerPoint ainda não informados.
+- Vídeo do YouTube foi testado e o usuário confirmou som diretamente na TV. Não
+  foram medidos sincronismo, duração ou perdas. Caminho de transporte não identificado;
+  esse relato não valida o endpoint de envio direto de vídeo do protocolo AirPlay.
+- Fonte das confirmações: relato do usuário, sem nova captura de tela ou áudio.
+
+### Distinção entre espelhamento e apresentação em duas telas
+
+O receptor decodifica o fluxo de vídeo que o emissor envia. Não lê PPTX ou notas,
+nem decide qual interface do PowerPoint substituir pelo slide. Conteúdo diferente
+nas duas telas exige que o aplicativo/iOS produza uma saída externa separada e
+que a sessão com o receptor suporte o caminho necessário.
+
+A [matriz oficial Microsoft](https://support.microsoft.com/en-us/powerpoint/compare-powerpoint-features-on-different-platforms)
+marca Presenter View como indisponível no PowerPoint para iOS, embora notas e
+apresentação de slides sejam recursos separados. A Microsoft também documenta
+[apresentação via AirPlay no iPhone](https://support.microsoft.com/en-us/powerpoint/present-a-slide-show-from-a-smartphone-and-use-a-laser-pointer-for-emphasis).
+Isso não permite concluir, apenas pelo relato, que uma alteração de flags do receptor
+resolverá a separação das telas, nem que toda projeção externa do PowerPoint é impossível.
+
+Próxima investigação, caso se priorize esse recurso: registrar versão/build do
+PowerPoint e testar a saída de apresentação iniciada no aplicativo. Comparar com
+um emissor que documente notas e saída externa separadas antes de modificar a
+negociação do receptor. O [Keynote no iPhone documenta esse uso](https://support.apple.com/guide/keynote-iphone/present-on-a-separate-display-tana4da2681/ios),
+mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicional.

@@ -5,8 +5,11 @@ Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5 / Android 11.
 **Primeiro espelhamento de tela confirmado pelo usuário:** iPhone 15 Pro Max com
 iOS 27.2 → Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5, em 5 de novembro de 2026.
 Os logs também confirmaram negociação, recepção H.264 e quadro exibido pelo decodificador.
-Fotos, PowerPoint, PDFs, legibilidade e estabilidade prolongada continuam pendentes;
-essa sessão não estabelece compatibilidade geral com outros aparelhos ou versões.
+PowerPoint: espelhamento idêntico ao iPhone confirmado pelo usuário; notas no celular
+com slides separados na TV **não funcionaram no teste**. YouTube: áudio na TV confirmado
+pelo usuário; não foi determinado se o aplicativo usou espelhamento ou envio direto.
+Fotos, PDFs, legibilidade e estabilidade prolongada continuam pendentes. Esses testes
+não estabelecem compatibilidade geral com outros aparelhos ou versões.
 
 O iPhone abre Fotos, PowerPoint e PDFs e transmite pixels da tela. O APK não abre
 PPTX/PDF. Prioridade: Central de Controle → Espelhamento de Tela. O botão AirPlay
@@ -72,7 +75,8 @@ python3 -m unittest discover -s tests -v
 
 Os testes verificam a classificação de evidências; não testam AirPlay. Build concluído
 não comprova iOS/Fire OS. Fotos, PDF e PowerPoint exigem inspeção visual na TV.
-Áudio é herdado e fica fora dos critérios desta primeira versão. Sem promessa de 4K,
+Áudio é herdado; houve confirmação de som na TV em um teste com YouTube.
+Sincronismo, codecs e estabilidade prolongada do áudio ainda não foram validados. Sem promessa de 4K,
 60 fps, múltiplos clientes ou conteúdo protegido por DRM.
 
 ## Licença
