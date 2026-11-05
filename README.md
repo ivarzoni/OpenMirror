@@ -14,8 +14,10 @@ iOS 27.2 → Fire TV Stick 4K (2ª geração), Fire OS 8.1.8.5, em 5 de novembro
 Os logs também confirmaram negociação, recepção H.264 e quadro exibido pelo decodificador.
 Keynote: apresentação em tela cheia na TV e modos de notas, próximo slide e
 atual + próximo no iPhone confirmados pelo usuário. PowerPoint 2.115.2: espelhamento
-idêntico ao iPhone; notas no celular com slides separados na TV **não funcionaram no teste**. YouTube: áudio na TV confirmado
-pelo usuário; não foi determinado se o aplicativo usou espelhamento ou envio direto.
+idêntico ao iPhone; notas no celular com slides separados na TV **não funcionaram no teste**.
+YouTube: usuário confirmou áudio na TV e imagem idêntica ao iPhone, após conectar
+pela Central de Controle → Espelhamento de Tela. Reprodução independente com
+controles apenas no celular não foi validada.
 Fotos: modo de apresentação confirmado pelo usuário; vídeos de Fotos com áudio na TV.
 PDFs: espelhamento idêntico ao iPhone confirmado, sem comportamento especial de apresentação.
 Legibilidade medida, estabilidade prolongada e uso sem internet continuam pendentes.

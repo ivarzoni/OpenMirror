@@ -268,3 +268,14 @@ Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo laun
   o usuário confirmou no mesmo iPhone/aparelho: conectou e o espelhamento
   funciona normalmente. Essa confirmação não constitui um novo teste separado
   de áudio ou dos modos de apresentação de cada aplicativo.
+
+### Confirmação posterior — cartão e YouTube
+
+- Usuário confirmou a imagem nova do cartão, ainda com faixas cinzas laterais.
+- YouTube: som na TV, mas vídeo espelhado com a mesma interface do iPhone, sem
+  controles exclusivos no celular. Conexão iniciada pela Central de Controle →
+  Espelhamento de Tela, conforme esclarecido pelo usuário.
+- Esse teste confirma espelhamento com áudio. Não valida nem refuta transmissão
+  independente iniciada no botão AirPlay/transmissão do YouTube. O modo e o destino
+  escolhidos pelo emissor precisam ser diferenciados antes de atribuir a causa
+  ao receptor. Nenhum teste de envio direto foi realizado nesta confirmação.
