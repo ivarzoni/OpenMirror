@@ -264,5 +264,7 @@ Não prometemos que a inclusão da arte 16:9 remova uma margem imposta pelo laun
   anterior; foi verificado que libairplay-jni.so permaneceu idêntica byte a byte.
 - O experimento não foi publicado. Manifesto e versão foram restaurados ao código
   público 0.1.3, com ícone claro quadrado sem distorção. Uma instalação limpa da
-  versão pública foi escolhida como resultado final. Espelhamento após essa
-  reinstalação ainda precisa ser confirmado no iPhone.
+  versão pública foi escolhida como resultado final. Após essa reinstalação,
+  o usuário confirmou no mesmo iPhone/aparelho: conectou e o espelhamento
+  funciona normalmente. Essa confirmação não constitui um novo teste separado
+  de áudio ou dos modos de apresentação de cada aplicativo.
