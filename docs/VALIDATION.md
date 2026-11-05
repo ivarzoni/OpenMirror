@@ -10,8 +10,10 @@ concluída e integridade do APK conferida. Conteúdo correto confirmado pelo rel
 
 PowerPoint espelhado e áudio do YouTube na TV foram confirmados pelo usuário;
 modo com notas privadas no celular e slides separados na TV não funcionou no teste.
-Ainda não validados: Fotos, PDF, nitidez de texto, rotação, slide parado, reconexões
-repetidas, sessão de 10 minutos, sincronismo/estabilidade de áudio e uso sem WAN.
+Fotos: apresentação e vídeos com áudio na TV confirmados pelo usuário. PDFs: tela
+espelhada idêntica ao iPhone, sem modo próprio de apresentação, confirmado pelo usuário.
+Ainda não validados: nitidez medida de texto, rotação, slide parado, reconexões repetidas,
+sessão de 10 minutos, sincronismo/estabilidade prolongada de áudio e uso sem WAN.
 Os registros a seguir mostram a sequência dos testes, incluindo tentativas anteriores.
 
 ## Ambiente e inspeção inicial
@@ -111,3 +113,30 @@ PowerPoint e testar a saída de apresentação iniciada no aplicativo. Comparar 
 um emissor que documente notas e saída externa separadas antes de modificar a
 negociação do receptor. O [Keynote no iPhone documenta esse uso](https://support.apple.com/guide/keynote-iphone/present-on-a-separate-display-tana4da2681/ios),
 mas não foi testado com OpenMirror. Nenhuma promessa de compatibilidade adicional.
+
+## Fotos e PDFs — relato adicional do usuário
+
+- Fotos funcionou sem problemas percebidos e entrou em modo de apresentação.
+- Vídeos em Fotos reproduziram áudio pela TV.
+- PDF repetiu exatamente a tela do iPhone, sem interface ou modo de apresentação
+  específico. Esse comportamento corresponde ao espelhamento recebido; não há
+  leitor PDF nem processamento de páginas no APK.
+- Confirmações por relato do usuário na mesma configuração de hardware/iOS.
+  Aplicativo leitor de PDF, duração e quantidade de itens não informados.
+
+## Interface 0.1.1 — tela de conexão
+
+- Novo painel de espera com ilustração vetorial local, três passos para conectar,
+  nome do receptor compartilhado com o anúncio e indicador de estado do serviço.
+- O painel inteiro é ocultado ao receber callback de quadro exibido e reaparece
+  quando a sessão é encerrada; não depende apenas de chegada de pacotes.
+- Gradle assembleDebug + lintDebug: BUILD SUCCESSFUL, 48 tarefas, 13s. Sem erros
+  de lint; avisos de desenho vetorial/layout, tamanho do rodapé, números nos passos,
+  ABI ChromeOS, backup e densidades de ícones.
+- Versão 0.1.1-experimental, versionCode 2; APK conferido por SHA-256 antes da instalação:
+  `f8ea31f042b6cba0648e97c15ccca176a5a8ec5da44ef1556bdc9c0b5bbd49f5`.
+- Instalação e abertura confirmadas no Fire TV AFTKM. Processo ativo, registro mDNS
+  concluído e nenhum FATAL EXCEPTION no registro de inicialização inspecionado.
+- Captura visual da tela de espera em 1920 × 1080 revisada: textos e ilustração
+  íntegros, sem sobreposição ou cortes. Imagem em docs/images/waiting-screen.png.
+- Reconexão do iPhone após a alteração de interface: aguardando confirmação do usuário.

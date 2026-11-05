@@ -17,6 +17,7 @@ public class MirrorActivity extends Activity {
 
     private SurfaceView surfaceView;
     private TextView status;
+    private View waitingPanel;
     private final Handler uiHandler = new Handler();
     private final NativeBridge.SessionEndListener sessionEndListener = this::endMirroringSession;
     private long lastBack;
@@ -25,16 +26,18 @@ public class MirrorActivity extends Activity {
     private final Runnable uiTick = new Runnable() {
         @Override public void run() {
             if (NativeBridge.getVideoSink().getRenderedFrames() > 0) {
-                status.setVisibility(View.GONE);
+                waitingPanel.setVisibility(View.GONE);
             } else {
-                status.setVisibility(View.VISIBLE);
+                waitingPanel.setVisibility(View.VISIBLE);
                 int state = NativeBridge.getServiceState();
                 if (state == NativeBridge.STATE_FAILED) {
                     status.setText(R.string.start_failed);
                 } else if (state == NativeBridge.STATE_READY) {
                     status.setText(R.string.waiting_for_connection);
                 }
-                /* STATE_STARTING：保持"初始化…" */
+                else {
+                    status.setText(R.string.initializing);
+                }
             }
             uiHandler.postDelayed(this, 1000);
         }
@@ -48,6 +51,7 @@ public class MirrorActivity extends Activity {
 
         surfaceView = findViewById(R.id.surface);
         status = findViewById(R.id.status);
+        waitingPanel = findViewById(R.id.waiting_panel);
 
         NativeBridge.setSessionEndListener(sessionEndListener);
         /* 解码器报出真实分辨率后按比例重排 SurfaceView：保持宽高比居中，多余部分留黑边，绝不拉伸 */
@@ -124,7 +128,7 @@ public class MirrorActivity extends Activity {
         NativeBridge.getVideoSink().endSession();
         runOnUiThread(() -> {
             status.setText(R.string.waiting_for_connection);
-            status.setVisibility(View.VISIBLE);
+            waitingPanel.setVisibility(View.VISIBLE);
         });
     }
 }

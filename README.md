@@ -8,8 +8,10 @@ Os logs também confirmaram negociação, recepção H.264 e quadro exibido pelo
 PowerPoint: espelhamento idêntico ao iPhone confirmado pelo usuário; notas no celular
 com slides separados na TV **não funcionaram no teste**. YouTube: áudio na TV confirmado
 pelo usuário; não foi determinado se o aplicativo usou espelhamento ou envio direto.
-Fotos, PDFs, legibilidade e estabilidade prolongada continuam pendentes. Esses testes
-não estabelecem compatibilidade geral com outros aparelhos ou versões.
+Fotos: modo de apresentação confirmado pelo usuário; vídeos de Fotos com áudio na TV.
+PDFs: espelhamento idêntico ao iPhone confirmado, sem comportamento especial de apresentação.
+Legibilidade medida, estabilidade prolongada e uso sem internet continuam pendentes.
+Esses testes não estabelecem compatibilidade geral com outros aparelhos ou versões.
 
 O iPhone abre Fotos, PowerPoint e PDFs e transmite pixels da tela. O APK não abre
 PPTX/PDF. Prioridade: Central de Controle → Espelhamento de Tela. O botão AirPlay
@@ -22,6 +24,13 @@ Não é um anúncio mDNS vazio. **Nome visível no iPhone não comprova espelham
 
 Consulte [viabilidade e licenças](docs/FEASIBILITY.md), [arquitetura](docs/ARCHITECTURE.md),
 [testes no aparelho](docs/TESTING.md) e [validação realizada](docs/VALIDATION.md).
+
+## Tela de conexão
+
+A versão 0.1.1 traz instruções em três passos, ilustração vetorial e indicador de
+prontidão. A tela de espera é ocultada quando o decodificador apresenta vídeo.
+
+![Tela de conexão do OpenMirror no Fire TV](docs/images/waiting-screen.png)
 
 ## Compilar no Mac
 

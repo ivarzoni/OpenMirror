@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <SurfaceView
-        android:id="@+id/surface"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <TextView
-        android:id="@+id/status"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="top"
-        android:background="#000000"
-        android:padding="16dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:text="@string/initializing" />
+ <SurfaceView android:id="@+id/surface" android:layout_width="match_parent" android:layout_height="match_parent"/>
+ <LinearLayout android:id="@+id/waiting_panel" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/waiting_background" android:orientation="vertical" android:paddingHorizontal="46dp" android:paddingVertical="30dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+   <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/app_name" android:textColor="#F3F8FC" android:textSize="29sp" android:textStyle="bold"/>
+   <TextView android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="350dp" android:background="@drawable/waiting_badge" android:paddingHorizontal="17dp" android:paddingVertical="9dp" android:text="@string/initializing" android:textColor="#8BE8D2" android:textSize="14sp"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="22dp" android:layout_marginBottom="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+   <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="36dp" android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/waiting_title" android:textColor="#F3F8FC" android:textSize="40sp" android:textStyle="bold" android:lineSpacingExtra="2dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/waiting_subtitle" android:textColor="#B4C8DA" android:textSize="18sp" android:lineSpacingExtra="4dp"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="132dp" android:layout_marginTop="20dp" android:src="@drawable/waiting_illustration" android:scaleType="fitStart" android:contentDescription="@string/waiting_diagram_description"/>
+   </LinearLayout>
+   <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.12" android:background="@drawable/waiting_card" android:padding="26dp" android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/waiting_steps_title" android:textColor="#F3F8FC" android:textSize="23sp" android:textStyle="bold"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:orientation="horizontal">
+    <TextView android:layout_width="30dp" android:layout_height="30dp" android:gravity="center" android:background="@drawable/waiting_number" android:text="1" android:textColor="#8BE8D2" android:textSize="16sp" android:textStyle="bold"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/waiting_step_1_title" android:textColor="#F3F8FC" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/waiting_step_1_detail" android:textColor="#B4C8DA" android:textSize="14sp"/>
+    </LinearLayout>
+ </LinearLayout><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:orientation="horizontal">
+    <TextView android:layout_width="30dp" android:layout_height="30dp" android:gravity="center" android:background="@drawable/waiting_number" android:text="2" android:textColor="#8BE8D2" android:textSize="16sp" android:textStyle="bold"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/waiting_step_2_title" android:textColor="#F3F8FC" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/waiting_step_2_detail" android:textColor="#B4C8DA" android:textSize="14sp"/>
+    </LinearLayout>
+ </LinearLayout><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:orientation="horizontal">
+    <TextView android:layout_width="30dp" android:layout_height="30dp" android:gravity="center" android:background="@drawable/waiting_number" android:text="3" android:textColor="#8BE8D2" android:textSize="16sp" android:textStyle="bold"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/waiting_step_3_title" android:textColor="#F3F8FC" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/waiting_receiver" android:paddingHorizontal="12dp" android:paddingVertical="8dp" android:text="@string/receiver_name" android:textColor="#8BE8D2" android:textSize="15sp"/>
+    </LinearLayout>
+ </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/waiting_keep_open" android:textColor="#8FAAC2" android:textSize="12sp"/>
+   </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+   <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/waiting_legal" android:textColor="#8FAAC2" android:textSize="10sp" android:lineSpacingExtra="3dp"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waiting_exit" android:textColor="#8FAAC2" android:textSize="11sp"/>
+  </LinearLayout>
+ </LinearLayout>
 </merge>

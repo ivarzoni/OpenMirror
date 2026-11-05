@@ -59,7 +59,7 @@ public class AirPlayService extends Service implements NativeBridge.Listener {
         String mac = intent != null ? intent.getStringExtra("mac") : null;
         /* 名称优先级：文件覆盖（filesDir/airplay_name）> intent extra > 默认 */
         if (name == null) name = readSmallFile("airplay_name");
-        if (name == null) name = "OpenMirror (experimental)";
+        if (name == null) name = getString(R.string.receiver_name);
         mac = mac != null ? mac : loadOrMakeMac();
         serviceName = name;
 
